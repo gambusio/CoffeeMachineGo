@@ -6,6 +6,9 @@ files:
   - name: tests.py
     visible: false
     learner_created: false
+  - name: go.mod
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/learn/step/14007#comment
 check_profile: hyperskill_go
 status: Unchecked
