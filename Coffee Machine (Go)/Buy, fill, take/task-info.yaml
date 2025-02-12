@@ -1,0 +1,16 @@
+type: remote_edu
+custom_name: "Buy, fill, take!"
+files:
+  - name: main.go
+    visible: true
+    learner_created: false
+  - name: tests.py
+    visible: false
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/14005#comment
+check_profile: hyperskill_go
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: "Wed, 12 Feb 2025 09:40:42 UTC"
+record: 4
