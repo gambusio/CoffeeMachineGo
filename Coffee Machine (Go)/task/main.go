@@ -88,6 +88,29 @@ func printState() {
 }
 
 /*
+Comprueba si el usario quiere algún extra
+*/
+func extraCheck() {
+	var selection string
+
+	fmt.Println("Do you want an extra? 1 - sugar, 2 - caramel syrup, 3 - no extras:")
+	fmt.Scan(&selection)
+	switch selection {
+	case "1":
+		cash += 1
+		fmt.Println("Sugar added")
+	case "2":
+		fmt.Println("Caramel syrup added")
+		cash += 2
+	case "3":
+		fmt.Println("You have no extras")
+	default:
+		fmt.Println("Wrong choice")
+	}
+	fmt.Println("I have enough resources, making you a coffee!")
+}
+
+/*
 Simula el comportamiento de la cafetera cuando un cliente pide un café
 */
 func buy() {
@@ -136,7 +159,7 @@ func buy() {
 		} else {
 			break
 		}
-		fmt.Println("I have enough resources, making you a coffee!")
+		extraCheck()
 	case "2": //latte 350 ml agua 75 ml leche 20 gr café 7 dólares
 		if waterAmount < 350 {
 			fmt.Println("Sorry, not enough water!")
@@ -168,7 +191,7 @@ func buy() {
 		coffeeAmount -= 20
 		cash += 7
 		dispoCups--
-		fmt.Println("I have enough resources, making you a coffee!")
+		extraCheck()
 	case "3": //cappuccino 200 ml agua 100 ml leche 12 g café 6 dólares
 		if waterAmount < 200 {
 			fmt.Println("Sorry, not enough water!")
@@ -201,7 +224,7 @@ func buy() {
 		coffeeAmount -= 12
 		cash += 6
 		dispoCups--
-		fmt.Println("I have enough resources, making you a coffee!")
+		extraCheck()
 	}
 	fmt.Println()
 }
